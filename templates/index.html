@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars Y'all</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+  </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class=row>
+                <h1> Latest Mars News</h1>
+                <h3>{{ mars.title_first_nasa }}</h3>
+                <p>{{ mars.paragraph_nasa }}</p>
+                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <br>
+            <div class="col-md-8">
+                <div class="row">
+                <h1>Featured Mars Image</h1>
+                <img src="{{ mars.jpl_image }}" alt="Featured Mars Image" height="438" width="700">
+                </div>
+            </div>
+            
+            <div class="col-md-4 out">
+                    
+                    <h3>Mars Weather</h3>
+                    <p>{{ mars.mars_weather }}</p>
+                    {% autoescape on %}
+                    <h4>Mars Facts</h4>
+                    {{ mars.df2 }}
+                    {% endautoescape %}
+            </div>
+                    
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="col-md-12">
+            <h2>Mars Hemispheres</h2>
+            <div class="row">
+            </div></div></div>
+
+
+  
+    <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <p><img src="{{ mars.cerberus_pic }}" alt="Featured Mars Image" height="300px" width="300px">  <img src="{{ mars.schiaparelli_pic }}" alt="schiaparelli_pic" height="300px" width="300px"></p>
+              <p><img src="{{ mars.syrtis_pic }}" alt="syrtis_pic" height="300px" width="300px">  <img src="{{ mars.valless_pic }}" alt="syrtis_pic" height="300px" width="300px"></p>
+      </div>
+      </div></div>
+ 
+  
+  
+  
+  </div>
+</body>
+
+</html>
